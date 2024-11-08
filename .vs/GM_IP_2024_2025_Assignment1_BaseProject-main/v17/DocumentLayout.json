@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|c:\\users\\2241010\\downloads\\gm_ip_2024_2025_assignment1_baseproject-main\\gm_ip_2024_2025_assignment1_baseproject-main\\assets\\scripts\\enemyasteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyasteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\assets\\scripts\\playership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\assets\\scripts\\enemyship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\assets\\scripts\\playerexplosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerexplosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\assets\\scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36E919FB-6B17-366A-CE88-917652093803}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyAsteroid.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\EnemyAsteroid.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyAsteroid.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\EnemyAsteroid.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyAsteroid.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T16:43:15.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyShip.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\EnemyShip.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyShip.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\EnemyShip.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyShip.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:31:58.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerExplosion.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\PlayerExplosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerExplosion.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\PlayerExplosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerExplosion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T16:42:49.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerShip.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\PlayerShip.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerShip.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\PlayerShip.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerShip.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:20:48.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Projectile.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\Projectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Projectile.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\Projectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Projectile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T16:01:58.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Spawner.cs",
+              "DocumentMoniker": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\Spawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
+              "ToolTip": "C:\\Users\\2241010\\Downloads\\GM_IP_2024_2025_Assignment1_BaseProject-main\\GM_IP_2024_2025_Assignment1_BaseProject-main\\Assets\\Scripts\\Spawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:49:27.254Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
