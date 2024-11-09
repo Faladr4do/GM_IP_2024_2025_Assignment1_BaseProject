@@ -417,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 562104283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.158267, y: -0.06091857, z: 1}
+  m_LocalPosition: {x: -16.73, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -553,7 +553,7 @@ Transform:
   m_GameObject: {fileID: 946116977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.85, y: -0.09, z: 1}
+  m_LocalPosition: {x: -8.92, y: 0.03, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -607,6 +607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6296805786559256922, guid: 1e35d0628d156b444b1d9ff054eae94d, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1739222558}
     - target: {fileID: 8989177631106404906, guid: 1e35d0628d156b444b1d9ff054eae94d, type: 3}
       propertyPath: m_Name
       value: PlayerShip

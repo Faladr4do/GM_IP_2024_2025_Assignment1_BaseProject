@@ -11,6 +11,9 @@ public class PlayerShip : MonoBehaviour
     Rigidbody2D kebab;
 
     [SerializeField]
+    private Camera mainCamera;
+
+    [SerializeField]
     private Transform spit_point;
 
     [SerializeField]
@@ -32,6 +35,10 @@ public class PlayerShip : MonoBehaviour
 
     private PlayerControls playerControls;
 
+    public float padding = 0.6f;
+
+    private Vector2 screenBounds;
+
     void Awake()
     {
         playerControls = new PlayerControls();
@@ -41,6 +48,15 @@ public class PlayerShip : MonoBehaviour
         playerControls.PlayerShip.Shoot.performed += InputShootPerformedHandler;
         playerControls.PlayerShip.Shoot.canceled += InputShootCanceledHandler;
         playerControls.PlayerShip.Shield.performed += InputShieldPerformedHandler;
+
+        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+    }
+
+    void Update()
+    {
+        Vector3 position = transform.position;
+        position.y = Mathf.Clamp(position.y, screenBounds.y * -1 + padding, screenBounds.y - padding);
+        transform.position = position;
     }
 
     private void InputShieldPerformedHandler(InputAction.CallbackContext context)

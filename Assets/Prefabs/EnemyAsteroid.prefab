@@ -162,4 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burger: {fileID: 4040300179712139388}
+  burger_explosion: {fileID: 7394682297758916464, guid: b3dae35ea30148d409ae4ba59c84bd8c, type: 3}
   speed: 5
