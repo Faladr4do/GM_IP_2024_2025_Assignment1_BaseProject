@@ -11,19 +11,24 @@ public class EnemyAsteroid : MonoBehaviour
     GameObject burger_explosion;
 
     [SerializeField]
+    private int score = 1;
+
+    [SerializeField]
     private float speed = 5f;
+
+    private GameManager gameManager;
 
     private void Awake()
     {
         burger.velocity = Vector2.left * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Player"))
+        {
+            Instantiate(burger_explosion, transform.position, transform.rotation);
+        }
         Destroy(gameObject);
-    }
-    private void OnDestroy()
-    {
-        Instantiate(burger_explosion, transform.position, transform.rotation);
     }
 }

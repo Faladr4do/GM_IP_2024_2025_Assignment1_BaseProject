@@ -46,7 +46,6 @@ public class PlayerShip : MonoBehaviour
         playerControls.PlayerShip.Movement.performed += InputMovePerformedHandler;
         playerControls.PlayerShip.Movement.canceled += InputMoveCanceledHandler;
         playerControls.PlayerShip.Shoot.performed += InputShootPerformedHandler;
-        playerControls.PlayerShip.Shoot.canceled += InputShootCanceledHandler;
         playerControls.PlayerShip.Shield.performed += InputShieldPerformedHandler;
 
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
@@ -62,11 +61,6 @@ public class PlayerShip : MonoBehaviour
     private void InputShieldPerformedHandler(InputAction.CallbackContext context)
     {
         Shoot();
-    }
-
-    private void InputShootCanceledHandler(InputAction.CallbackContext context)
-    {
-        throw new NotImplementedException();
     }
 
     private void InputShootPerformedHandler(InputAction.CallbackContext context)

@@ -14,18 +14,28 @@ public class EnemyShip : MonoBehaviour
     private Transform spit_point;
 
     [SerializeField]
+    private int score = 1;
+
+    [SerializeField]
     private float speed = 5f;
 
     [SerializeField]
     private float projectile_speed = 3;
+
+    private GameManager gameManager;
 
     private void Awake()
     {
         doner.velocity = Vector2.left * speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Player"))
+        {
+            gameManager = FindAnyObjectByType<GameManager>();
+            gameManager.AddScore(score);
+        }
         Destroy(gameObject);
     }
 
