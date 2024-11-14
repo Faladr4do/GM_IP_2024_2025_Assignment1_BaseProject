@@ -79,9 +79,9 @@ public class PlayerShip : MonoBehaviour
         kebab.velocity = verticalInput * speed * Vector2.up;
     }
 
-    // Update is called once per frame
     private void Shoot()
     {
+        
         GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
         laser.GetComponent<Rigidbody2D>().velocity = Vector2.right * spit_speed;
     }

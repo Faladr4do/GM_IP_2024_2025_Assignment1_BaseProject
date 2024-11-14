@@ -194,9 +194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kebab: {fileID: 5173790477428530506}
+  mainCamera: {fileID: 0}
   spit_point: {fileID: 218524872971240050}
   projectile: {fileID: 7822866950584904375, guid: 40225b88e135f6343bfde851fb8c769e, type: 3}
   kebab_explosion: {fileID: 8485886139760233299, guid: 6d6c5fb747b13f94ea61cdb5049f9b3e, type: 3}
   timed_shot: 0.5
   speed: 5
   spit_speed: 5
+  padding: 0.5

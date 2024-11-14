@@ -881,6 +881,8 @@ MonoBehaviour:
   - {fileID: 617913785}
   waitTime: 3
   obstacle_speed: 3
+  timed_shot: 0
+  screen_enemies: []
 --- !u!4 &1279017793
 Transform:
   m_ObjectHideFlags: 0
@@ -933,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93.3, y: 76.2}
+  m_AnchoredPosition: {x: 300, y: 110}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355712872
@@ -965,8 +967,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278224383
+  m_fontColor: {r: 1, g: 0.52119267, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

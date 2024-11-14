@@ -24,6 +24,8 @@ public class EnemyShip : MonoBehaviour
 
     private GameManager gameManager;
 
+    private Spawner spawner;
+
     private void Awake()
     {
         doner.velocity = Vector2.left * speed;
@@ -35,11 +37,13 @@ public class EnemyShip : MonoBehaviour
         {
             gameManager = FindAnyObjectByType<GameManager>();
             gameManager.AddScore(score);
+            //spawner.RemoveList(gameObject);
+            //spawner.screen_enemies.Remove(gameObject);
         }
         Destroy(gameObject);
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
         laser.GetComponent<Rigidbody2D>().velocity = Vector2.left * (speed +3);

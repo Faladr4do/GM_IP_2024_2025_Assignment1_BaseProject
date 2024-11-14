@@ -11,12 +11,11 @@ public class EnemyAsteroid : MonoBehaviour
     GameObject burger_explosion;
 
     [SerializeField]
-    private int score = 1;
-
-    [SerializeField]
     private float speed = 5f;
 
     private GameManager gameManager;
+
+    private Spawner spawner;
 
     private void Awake()
     {
