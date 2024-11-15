@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     private Transform[] SpawnPoints;
 
     int spawn_index;
+    bool asteroid_spawned;
 
     [SerializeField]
     private float waitTime = 2f;
@@ -24,20 +25,41 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(TimedSpawn());
+        //StartCoroutine(TimedSpawn());
     }
 
-    private IEnumerator TimedSpawn()
+    private void TimedSpawn()
     {
-        WaitForSeconds waitForTime = new WaitForSeconds(waitTime);
-        while (true)
+        if (asteroid_spawned)
         {
-            yield return waitForTime;
-            int obstacle_index = Random.Range(0, ObstaclePrefabs.Length);
-            int spawn_index = Random.Range(0, SpawnPoints.Length);
-            SpawnThree(obstacle_index);
-            //Instantiate(ObstaclePrefabs[obstacle_index], SpawnPoints[spawn_index].position, ObstaclePrefabs[obstacle_index].transform.rotation); // fix code
+            print("ffj");
+        }
+
+        int obstacle_index = Random.Range(0, ObstaclePrefabs.Length);
+        switch (obstacle_index)
+        {
+            case 0:
+                SpawnThree(obstacle_index);
+                asteroid_spawned = false;
+                break;
+            case 1:
+                SpawnRandom(obstacle_index);
+                asteroid_spawned = true;
+                break;
+            default:
+                SpawnRandom(obstacle_index);
+                break;
+        }
+        //Instantiate(ObstaclePrefabs[obstacle_index], SpawnPoints[spawn_index].position, ObstaclePrefabs[obstacle_index].transform.rotation); // fix code
             
+      
+    }
+
+    private void FixedUpdate()
+    {
+        if (screen_enemies.Count == 0)
+        {
+            TimedSpawn();
         }
     }
 
@@ -64,8 +86,8 @@ public class Spawner : MonoBehaviour
         {
             GameObject enemy = Instantiate(ObstaclePrefabs[prefab], SpawnPoints[index].position, ObstaclePrefabs[prefab].transform.rotation);
             screen_enemies.Add(enemy);
-            print(screen_enemies +"a"+ screen_enemies.Count + " 2");
-            enemy.Shoot();
+            print(screen_enemies.Count);
+            enemy.GetComponent<EnemyShip>().Shoot();
         }
     }
     public void RemoveList(GameObject gameObject)

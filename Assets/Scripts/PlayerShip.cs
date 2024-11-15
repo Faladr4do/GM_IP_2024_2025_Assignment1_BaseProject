@@ -94,5 +94,10 @@ public class PlayerShip : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(kebab_explosion, transform.position, transform.rotation);
+        playerControls.PlayerShip.Disable();
+        playerControls.PlayerShip.Movement.performed -= InputMovePerformedHandler;
+        playerControls.PlayerShip.Movement.canceled -= InputMoveCanceledHandler;
+        playerControls.PlayerShip.Shoot.performed -= InputShootPerformedHandler;
+        playerControls.PlayerShip.Shield.performed -= InputShieldPerformedHandler;
     }
 }

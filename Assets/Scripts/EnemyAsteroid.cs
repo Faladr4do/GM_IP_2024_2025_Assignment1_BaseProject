@@ -17,9 +17,10 @@ public class EnemyAsteroid : MonoBehaviour
 
     private Spawner spawner;
 
-    private void Awake()
+    private void Start()
     {
         burger.velocity = Vector2.left * speed;
+        spawner = FindAnyObjectByType<Spawner>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -29,5 +30,9 @@ public class EnemyAsteroid : MonoBehaviour
             Instantiate(burger_explosion, transform.position, transform.rotation);
         }
         Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        spawner.screen_enemies.Remove(gameObject);
     }
 }

@@ -26,19 +26,18 @@ public class EnemyShip : MonoBehaviour
 
     private Spawner spawner;
 
-    private void Awake()
+    private void Start()
     {
         doner.velocity = Vector2.left * speed;
+        gameManager = FindAnyObjectByType<GameManager>();
+        spawner = FindAnyObjectByType<Spawner>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            gameManager = FindAnyObjectByType<GameManager>();
             gameManager.AddScore(score);
-            //spawner.RemoveList(gameObject);
-            //spawner.screen_enemies.Remove(gameObject);
         }
         Destroy(gameObject);
     }
@@ -47,5 +46,9 @@ public class EnemyShip : MonoBehaviour
     {
         GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
         laser.GetComponent<Rigidbody2D>().velocity = Vector2.left * (speed +3);
+    }
+    private void OnDestroy()
+    {
+        spawner.screen_enemies.Remove(gameObject);
     }
 }
