@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private int game_score = 0;
-    public int enemies_destroyed = 0;
+    private int enemies_destroyed = 0;
+    private int enemies_limit = 10;
 
     [SerializeField]
     private TextMeshProUGUI textScore;
@@ -18,11 +19,19 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         game_score += score;
-        print(enemies_destroyed);
+        enemies_destroyed++;
         UpdateScore();
     }
     private void UpdateScore()
     {
         textScore.text = "Score: " + game_score.ToString();
     }
+    private void FixedUpdate()
+    {
+        if (enemies_destroyed >= enemies_limit)
+        {
+
+        }
+    }
+    
 }

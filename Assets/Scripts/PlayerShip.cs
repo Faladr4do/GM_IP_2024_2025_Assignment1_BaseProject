@@ -31,7 +31,7 @@ public class PlayerShip : MonoBehaviour
     [SerializeField]
     private float spit_speed = 5f;
 
-    private float speedAtual = 0f;
+    private bool can_shoot = true;
 
     private PlayerControls playerControls;
 
@@ -65,7 +65,24 @@ public class PlayerShip : MonoBehaviour
 
     private void InputShootPerformedHandler(InputAction.CallbackContext context)
     {
-        Shoot();
+        if (can_shoot)
+        {
+            Shoot();
+        }
+    }
+    private void Shoot()
+    {
+        GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
+        laser.GetComponent<Rigidbody2D>().velocity = Vector2.right * spit_speed;
+        can_shoot = false;
+        StartCoroutine(FireRate());
+    }
+
+    private IEnumerator FireRate()
+    {
+        yield return new WaitForSeconds(timed_shot);
+        can_shoot = true;
+        
     }
 
     private void InputMoveCanceledHandler(InputAction.CallbackContext context)
@@ -77,12 +94,6 @@ public class PlayerShip : MonoBehaviour
     {
         float verticalInput = context.ReadValue<float>();
         kebab.velocity = verticalInput * speed * Vector2.up;
-    }
-
-    private void Shoot()
-    {
-        GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
-        laser.GetComponent<Rigidbody2D>().velocity = Vector2.right * spit_speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

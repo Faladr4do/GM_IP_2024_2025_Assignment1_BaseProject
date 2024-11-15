@@ -58,13 +58,9 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator TimedShot()
     {
-        WaitForSeconds waitForTime = new WaitForSeconds(timed_shot);
-        while (true)
-        {
-            yield return waitForTime;
-            int select_shooter = Random.Range(0, screen_enemies.Count);
-            screen_enemies[select_shooter].GetComponent<EnemyShip>().Shoot();
-        }
+        yield return new WaitForSeconds(timed_shot);
+        int select_shooter = Random.Range(0, screen_enemies.Count);
+        screen_enemies[select_shooter].GetComponent<EnemyShip>().Shoot();
     }
 
     private void SpawnRandom(GameObject prefab)

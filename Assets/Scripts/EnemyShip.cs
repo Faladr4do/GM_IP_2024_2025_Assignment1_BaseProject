@@ -40,7 +40,6 @@ public class EnemyShip : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gameManager.AddScore(score);
-            gameManager.enemies_destroyed++;
         }
         if (!other.CompareTag("Enemy"))
         {

@@ -29,9 +29,7 @@ public class EnemyAsteroid : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Instantiate(burger_explosion, transform.position, transform.rotation);
-            gameManager.enemies_destroyed++;
         }
-
         print(other.gameObject);
         if (!other.CompareTag("Enemy"))
         {
