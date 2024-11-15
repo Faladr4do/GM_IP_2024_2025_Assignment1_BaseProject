@@ -20,6 +20,7 @@ public class EnemyAsteroid : MonoBehaviour
     private void Start()
     {
         burger.velocity = Vector2.left * speed;
+        gameManager = FindAnyObjectByType<GameManager>();
         spawner = FindAnyObjectByType<Spawner>();
     }
 
@@ -28,11 +29,14 @@ public class EnemyAsteroid : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Instantiate(burger_explosion, transform.position, transform.rotation);
+            gameManager.enemies_destroyed++;
         }
-        Destroy(gameObject);
-    }
-    private void OnDestroy()
-    {
-        spawner.screen_enemies.Remove(gameObject);
+
+        print(other.gameObject);
+        if (!other.CompareTag("Enemy"))
+        {
+            spawner.screen_enemies.Remove(gameObject);
+            Destroy(gameObject);
+        }
     }
 }
