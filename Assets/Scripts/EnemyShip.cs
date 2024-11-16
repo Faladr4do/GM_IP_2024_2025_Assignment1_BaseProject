@@ -51,6 +51,6 @@ public class EnemyShip : MonoBehaviour
     public void Shoot()
     {
         GameObject laser = Instantiate(projectile, spit_point.position, transform.rotation);
-        laser.GetComponent<Rigidbody2D>().velocity = Vector2.left * (speed +3);
+        laser.GetComponent<Rigidbody2D>().velocity = Vector2.left * (speed + spawner.projectile_speed);
     }
 }

@@ -82,7 +82,6 @@ public class PlayerShip : MonoBehaviour
     {
         yield return new WaitForSeconds(timed_shot);
         can_shoot = true;
-        
     }
 
     private void InputMoveCanceledHandler(InputAction.CallbackContext context)

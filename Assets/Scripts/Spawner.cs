@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,15 +12,22 @@ public class Spawner : MonoBehaviour
     private GameObject Asteroid;
 
     [SerializeField]
+    private GameObject BossEnemy;
+
+    [SerializeField]
     private Transform[] SpawnPoints;
+
+    [SerializeField]
+    private Transform boss_point;
 
     int spawn_index;
     bool asteroid_spawned = false;
 
     [SerializeField]
     private float waitTime = 2f;
+
     [SerializeField]
-    private float obstacle_speed = 3f;
+    public float projectile_speed = 3f;
 
     [SerializeField]
     private float timed_shot = 2f;
@@ -28,13 +36,11 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(TimedSpawn());
+        SpawnRandom(Asteroid);
     }
 
     private void SpawnHandler()
     {
-        //int obstacle_index = Random.Range(0, ObstaclePrefabs.Length);
-        //print(obstacle_index);
         if (asteroid_spawned)
         {
             SpawnThree(EnemyShip);
@@ -43,9 +49,6 @@ public class Spawner : MonoBehaviour
         {
             SpawnRandom(Asteroid);
         }
-        //Instantiate(ObstaclePrefabs[obstacle_index], SpawnPoints[spawn_index].position, ObstaclePrefabs[obstacle_index].transform.rotation); // fix code
-
-
     }
 
     private void FixedUpdate()
@@ -59,15 +62,17 @@ public class Spawner : MonoBehaviour
     private IEnumerator TimedShot()
     {
         yield return new WaitForSeconds(timed_shot);
-        int select_shooter = Random.Range(0, screen_enemies.Count);
+        int select_shooter = UnityEngine.Random.Range(0, screen_enemies.Count);
         screen_enemies[select_shooter].GetComponent<EnemyShip>().Shoot();
     }
 
     private void SpawnRandom(GameObject prefab)
     {
-        int spawn_index = Random.Range(0, SpawnPoints.Length);
-        Instantiate(prefab, SpawnPoints[spawn_index].position, prefab.transform.rotation);
         asteroid_spawned = true;
+        int spawn_index = UnityEngine.Random.Range(0, SpawnPoints.Length);
+        GameObject obstacle = Instantiate(prefab, SpawnPoints[spawn_index].position, prefab.transform.rotation);
+        screen_enemies.Add(obstacle);
+
     }
 
     private void SpawnThree(GameObject prefab)
@@ -77,10 +82,22 @@ public class Spawner : MonoBehaviour
         {
             GameObject enemy = Instantiate(prefab, SpawnPoints[index].position, prefab.transform.rotation);
             screen_enemies.Add(enemy);
-            print(screen_enemies.Count);
-            //enemy.GetComponent<EnemyShip>().Shoot();
         }
         StartCoroutine(TimedShot());
         asteroid_spawned = false;
+    }
+
+    private void SpawnBoss()
+    {
+        Instantiate(BossEnemy, boss_point.position, BossEnemy.transform.rotation);
+    }
+
+    public void DestroyAll()
+    {
+        for (int i = 0; i < screen_enemies.Count; i++)
+        {
+            Destroy(screen_enemies[i]);
+        }
+        SpawnBoss();
     }
 }
